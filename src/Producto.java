@@ -1,4 +1,5 @@
 public abstract class Producto {
+    private String id;
     private String nombre;
     private String descripcion;
     private String categoria;
@@ -6,14 +7,23 @@ public abstract class Producto {
     private Double precio;
     private String urlFoto;
 
-    public Producto(String nombre, String descripcion, String categoria, String etiquetas, Double precio, String urlFoto) {
+    public Producto(String id, String nombre, String descripcion, String categoria, String etiquetas, Double precio, String urlFoto) {
         super();
+        this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.categoria = categoria;
         this.etiquetas = etiquetas;
         this.precio = precio;
         this.urlFoto = urlFoto;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNombre() {

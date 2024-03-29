@@ -1,14 +1,14 @@
 public class ProductoElectronico extends Producto implements Vendible{
     private int garantiaMeses;
 
-    public ProductoElectronico(String nombre, String descripcion, String categoria, String etiquetas, Double precio, String urlFoto, int garantiaMeses) {
-        super(nombre, descripcion, categoria, etiquetas, precio, urlFoto);
+    public ProductoElectronico(String id, String nombre, String descripcion, String categoria, String etiquetas, Double precio, String urlFoto, int garantiaMeses) {
+        super(id, nombre, descripcion, categoria, etiquetas, precio, urlFoto);
         this.garantiaMeses = garantiaMeses;
     }
 
     @Override
     public void mostrarDetalle() {
-        System.out.println("Información del Articulo \n Nombre: " + getNombre() + ", Descripción: " + getDescripcion() + ", Cartegoria: " + getCategoria() + ", Etiquetas: " + getEtiquetas() + ", Precio: $ " + String.format("%.2f", getPrecio()) + ", URL Foto: " + getUrlFoto() + "," + " Garantia: " + this.garantiaMeses + " Meses" + " \n");
+        System.out.println("Información del Articulo \n Id: " + getId() + ", Nombre: " + getNombre() + ", Descripción: " + getDescripcion() + ", Cartegoria: " + getCategoria() + ", Etiquetas: " + getEtiquetas() + ", Precio: $ " + String.format("%.2f", getPrecio()) + ", URL Foto: " + getUrlFoto() + "," + " Garantia: " + this.garantiaMeses + " Meses" + " \n");
     }
 
     @Override

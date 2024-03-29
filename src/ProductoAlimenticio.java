@@ -1,14 +1,14 @@
 public class ProductoAlimenticio extends Producto implements Vendible{
     private String fechaCaducidad;
 
-    public ProductoAlimenticio(String nombre, String descripcion, String categoria, String etiquetas, Double precio, String urlFoto, String fechaCaducidad) {
-        super(nombre, descripcion, categoria, etiquetas, precio, urlFoto);
+    public ProductoAlimenticio(String id, String nombre, String descripcion, String categoria, String etiquetas, Double precio, String urlFoto, String fechaCaducidad) {
+        super(id, nombre, descripcion, categoria, etiquetas, precio, urlFoto);
         this.fechaCaducidad = fechaCaducidad;
     }
 
     @Override
     public void mostrarDetalle() {
-        System.out.println("Información del Articulo \n Nombre: " + getNombre() + ", Descripción: " + getDescripcion() + ", Cartegoria: " + getCategoria() + ", Etiquetas: " + getEtiquetas() + ", Precio: $ " + String.format("%.2f", getPrecio()) + ", URL Foto: " + getUrlFoto() + "," + " Fecha de Caducidad: " + this.fechaCaducidad + " \n");
+        System.out.println("Información del Articulo \n Id: " + getId() + ", Nombre: " + getNombre() + ", Descripción: " + getDescripcion() + ", Cartegoria: " + getCategoria() + ", Etiquetas: " + getEtiquetas() + ", Precio: $ " + String.format("%.2f", getPrecio()) + ", URL Foto: " + getUrlFoto() + "," + " Fecha de Caducidad: " + this.fechaCaducidad + " \n");
     }
 
     @Override
